@@ -15,7 +15,7 @@ with app.app_context():
 
 @app.route("/")
 def home():
-    return jsonify({"message": "Welcome to the Book Marketplace API!"}), 100
+    return jsonify({"message": "Welcome to the Book Marketplace API!"}), 200
 
 @app.route("/signup", methods=["POST"])
 def signup():
