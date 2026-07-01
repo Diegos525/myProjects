@@ -15,7 +15,7 @@ with app.app_context():
 
 @app.route("/")
 def home():
-    return jsonify({"message": "Welcome to the Book Marketplace API!"})
+    return jsonify({"message": "Welcome to the Book Marketplace API!"}), 100
 
 @app.route("/signup", methods=["POST"])
 def signup():
@@ -61,7 +61,7 @@ def login():
             "username": user.username,
             "email": user.email
          }
-        })
+        }), 200
 
 @app.route("/books", methods=["GET"])
 def get_books():
@@ -81,7 +81,7 @@ def get_books():
             "seller_username": seller.username
             # no email here anymore
         })
-    return jsonify(book_list)
+    return jsonify(book_list), 200
 
 
 @app.route("/books/<int:id>/contact", methods=["GET"])
@@ -102,7 +102,7 @@ def get_seller_contact(id):
     return jsonify({
         "seller_username": seller.username,
         "seller_email": seller.email
-    })
+    }), 200
     
 @app.route("/books", methods=["POST"])
 def add_book():
@@ -135,7 +135,7 @@ def delete_book(id):
     db.session.delete(book)
     db.session.commit()
 
-    return jsonify({"message": "Book deleted"})
+    return jsonify({"message": "Book deleted"}), 200
 
 @app.route("/books/<int:id>/sold", methods=["PUT"])
 def mark_sold(id):
@@ -147,7 +147,7 @@ def mark_sold(id):
     book.sold = True
     db.session.commit()
 
-    return jsonify({"message": "Book marked as sold"})
+    return jsonify({"message": "Book marked as sold"}), 200
 
 if __name__ == "__main__":
     app.run(debug=True)
