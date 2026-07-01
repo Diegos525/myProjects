@@ -128,10 +128,12 @@ def delete_book(id):
     if not book:
         return jsonify({"error": "Book not found"}), 404
 
+    print("Deleting book:", book.id, book.title)
+
     db.session.delete(book)
     db.session.commit()
 
-    return jsonify({"message": "Book deleted"})
+    return jsonify({"message": "Book deleted", "deleted_id": id})
 
 @app.route("/books/<int:id>/sold", methods=["PUT", "OPTIONS"])
 def mark_sold(id):
