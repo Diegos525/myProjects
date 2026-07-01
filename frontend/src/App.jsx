@@ -122,14 +122,21 @@ function markSold(id) {
 }
 
 function contactSeller(bookId, bookTitle) {
+  const mailWindow = window.open("", "_blank");
+
   axios.get(`${API_URL}/books/${bookId}/contact`, {
     params: { requester_id: user.id },
   })
     .then((response) => {
       const { seller_email } = response.data;
-      window.location.href = `mailto:${seller_email}?subject=Interested in "${bookTitle}"&body=Hi, I saw your listing for "${bookTitle}" on Bobcat Book Exchange and I'm interested!`;
+      const mailtoLink = `mailto:${seller_email}?subject=Interested in "${bookTitle}"&body=Hi, I saw your listing for "${bookTitle}" on Bobcat Book Exchange and I'm interested!`;
+
+      if (mailWindow) {
+        mailWindow.location.href = mailtoLink;
+      }
     })
     .catch((error) => {
+      if (mailWindow) mailWindow.close();
       setMessage(error.response?.data?.error || "Could not get seller contact info");
     });
 }
