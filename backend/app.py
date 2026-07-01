@@ -107,10 +107,14 @@ def get_seller_contact(id):
 @app.route("/books", methods=["POST"])
 def add_book():
     data = request.get_json()
+    try:
+        price=float(data.get("price", 0))
+    except (ValueError, TypeError):
+        return jsonify({"error": "Price must be a valid number"}), 400
     new_book = Book(
         title=data.get("title"),
         author=data.get("author"),
-        price=float(data.get("price")),
+        price=price,
         condition=data.get("condition"),
         description=data.get("description"),
         seller_id=data.get("seller_id"),
@@ -133,7 +137,7 @@ def delete_book(id):
 
     return jsonify({"message": "Book deleted"})
 
-@app.route("/books/<int:id>/sold", methods=["PUT", "OPTIONS"])
+@app.route("/books/<int:id>/sold", methods=["PUT"])
 def mark_sold(id):
     book = Book.query.get(id)
 
