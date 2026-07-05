@@ -1,0 +1,71 @@
+h1 {
+    color: rgb(251, 0, 0)
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    color: rgb(255, 94, 0);
+}
+
+body {
+    background-color: rgb(10, 10, 10)
+   
+}
+ 
+body {
+    font-family: 'impact', sans-serif;
+}
+
+p {
+    color:rgb(168, 40, 40)
+    
+}
+
+p{
+    font-size: 20px;
+}
+p {
+    margin:20px;
+    padding:10px;
+}
+ nav a { 
+   margin-right: 20px;
+ }
+ ul {
+    color: rgb(132, 22, 22);
+ }
+ img {
+    border: 5px solid rgb(255, 121, 121);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 600px;
+     width: 400px;
+ }
+  iframe {
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+     width: 400px;
+     height: 300px;
+  }
+  table {
+    border: 2px solid rgb(138, 123, 61);
+    border-collapse: collapse;
+    margin: 20px auto;
+    color:rgb(255, 123, 47)
+
+}
+
+th, td {
+    border: 1px solid rgb(103, 67, 33);
+    padding: 10px;
+}
+
+th {
+    background-color: rgb(58, 32, 12);
+}
