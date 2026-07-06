@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(33, 25, 51);
+    margin: 30px;
+}
+
+h1 {
+    color: rgb(114, 102, 150);
+    text-align: center;
+    font-family:Trebuchet MS;
+
+}
+
+button {
+    background-color: rgb(63, 51, 90);
+    color: rgb(255, 255, 255);
+    padding: 8px;
+    margin: 5px;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: white;
+    margin-top: 5px;
+}
+
+th, td {
+    padding: 1px;
+    border: 1px solid black;
+    font-family: fantasy;
+}
+
+h2 {
+    font-family:cursive;
+    color:rgb(126, 114, 171);
+}
