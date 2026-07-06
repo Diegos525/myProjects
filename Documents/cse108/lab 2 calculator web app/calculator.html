@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="calculadora.css">
+</head> 
+
+<body>
+  
+<p id="change"> calculator</p>
+<div class="calculator">
+    <input id="display">
+    
+    <button class="number" onclick="goku('1')">1</button>
+    <button class="number" onclick="goku('2')">2</button>
+    <button class="number" onclick="goku('3')">3</button>
+    <button class="number" onclick="goku('4')">4</button>
+    <button class="number" onclick="goku('5')">5</button>
+    <button class="number" onclick="goku('6')">6</button>
+    <button class="number" onclick="goku('7')">7</button>
+    <button class="number" onclick="goku('8')">8</button>
+    <button class="number" onclick="goku('9')">9</button>
+    <button class="number" onclick="goku('0')">0</button>
+    <button class="number" onclick=" goku('.')">.</button>
+    <button class="operation" onclick="highlight(this); goku('+')">+</button>
+    <button class="operation" onclick="highlight(this); goku('-')">-</button>
+    <button class="operation" onclick="highlight(this); goku('*')">x</button>
+    <button class="operation" onclick="highlight(this); goku('/')">÷</button>
+    <button class="operation" onclick="vegeta()">=</button>
+    <button class="c" onclick="piccoro()">C</button>
+</div>
+
+
+
+<script src="calc.js"></script>
+
+
+
+</body>
+
+
+
+</html>

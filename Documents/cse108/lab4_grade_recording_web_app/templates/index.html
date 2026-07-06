@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<title> Grade </title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+ <body> 
+<h1> Grade recording </h1>
+<p>Students: </p>
+<button onclick="getAllGrades()"> Show grades </button>
+
+
+<h2>Find Student Grade</h2>
+<input type="text" id="searchName" placeholder="Student name">
+<button onclick="getStudentGrade()">Search</button>
+<p id="searchResult"></p>
+
+<h2>Add Student</h2>
+<input type="text" id="addName" placeholder="Student name">
+<input type="number" id="addGrade" placeholder="Grade">
+<button onclick="addStudent()">Add Student</button>
+
+
+<h2>Edit Grade</h2>
+<input type="text" id="editName" placeholder="Student name">
+<input type="number" id="editGrade" placeholder="New grade">
+<button onclick="editGrade()">Edit Grade</button>
+
+
+<h2>Delete Student</h2>
+<input type="text" id="deleteName" placeholder="Student name">
+<button onclick="deleteStudent()">Delete Student</button>
+
+<table border="1">
+    <thead> 
+        <tr>
+                <th> Name </th>
+                <th> Grade</th>
+        </tr>
+    </thead>
+    <tbody id="gradesTable"> </tbody>
+</table>
+
+<script src = "/static/script.js"></script>
+
+</body>
+
+</html>

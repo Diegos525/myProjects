@@ -1,0 +1,40 @@
+.buttons {
+  justify-content: center;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 270px;
+
+
+  
+}
+.screen .MuiOutlinedInput-root {
+  background-color: rgb(81, 89, 147);
+  color: rgb(0, 0, 0);
+  font: 29px courier;
+margin-bottom: 10px; 
+width: 100%;
+height: 60px;
+
+
+
+}
+
+
+
+
+.operator.active { 
+  background-color: rgb(0, 191, 255) !important;
+
+}
+.calculator {
+  border: 7px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  background-color: rgb(26, 28, 37);
+  width: 350px;
+  padding: 20px;
+  height: 430px;
+  margin: 30px auto;
+  box-shadow: 0px 0px 15px rgb(181, 181, 181);
+  box-sizing:border-box;
+}
